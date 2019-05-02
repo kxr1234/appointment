@@ -1,0 +1,18 @@
+<div class="card my-5">
+  <div class="card-body">
+    <label *ngIf="appointment.code"> {{appointment.code}}</label>
+<form (ngSubmit)="onSubmit()" #userForm="ngForm" >
+  <div class="form-group">
+  <fieldset>
+   firstName: <input id="firstName"[(ngModel)]="appointment.firstName" class="form-control" type="text" name="firstName" ><br>
+   lastName: <input id="lastName" [(ngModel)]="appointment.lastName" class="form-control" type="text" name="lastName" ><br>
+   Date of birth: <input id="dob" [(ngModel)]="appointment.dob" class="form-control" type="date" name="dob"><br>
+   Appointment Date: <input id="appDate" [(ngModel)]="appointment.appDate" class="form-control" type="date" name="appDate"><br>
+   Time: <input id="time" [(ngModel)]="appointment.time" class="form-control" type="text" name="time" >
+  </fieldset>
+  <button type="submit"  class="btn btn-info">Submit</button>
+</div>
+ </form>
+
+</div>
+</div>

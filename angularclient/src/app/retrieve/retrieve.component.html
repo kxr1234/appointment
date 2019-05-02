@@ -1,0 +1,23 @@
+<div class="card my-5">
+  <div class="card-body">
+
+      <label *ngIf="appointment.id">
+          First Name :-{{appointment.firstName}}
+          Last Name :-{{appointment.lastName}}
+          Date of Birth :-{{appointment.dob}}
+          Appointment Date :-{{appointment.appDate}}
+          Time :-{{appointment.time}}
+        </label>
+<form (ngSubmit)="onSubmit()" #userForm="ngForm" >
+  <div class="form-group">
+  <fieldset>
+   code: <input id="code"[(ngModel)]="code" class="form-control" type="text" name="code" ><br>
+  </fieldset>
+  <button type="submit"  class="btn btn-info">Submit</button>
+</div>
+ </form>
+
+
+
+</div>
+</div>
