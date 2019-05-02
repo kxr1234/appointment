@@ -31,10 +31,12 @@ public class Appointment {
 	public Appointment() {
 
 	} 
-    public Appointment(String firstName, String lastName, Date dob) {
+    public Appointment(String firstName, String lastName, Date dob, Date appDate, String time) {
          this.firstName = firstName;
          this.lastName = lastName;
-         this.dob = dob;
+		 this.dob = dob;
+		 this.appDate = appDate;
+		 this.time = time;
      }
 	public long getId() {
 		return id;
