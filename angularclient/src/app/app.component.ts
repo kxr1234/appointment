@@ -1,5 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-import { AppointmentComponent } from './appointment/appointment.component';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +6,4 @@ import { AppointmentComponent } from './appointment/appointment.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private collapsed = true;
-     title = 'angularclient';
-
-  toggleCollapsed(): void {
-    this.collapsed = !this.collapsed;
-}
-
-reset(){
-  alert('reset');
-}
 }
