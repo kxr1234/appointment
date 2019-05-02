@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Appointment } from '../models/appointment.model';
-import { UserService } from '../service/user.service';
 import { Router } from '@angular/router';
+import { AppointmentService } from '../service/appointment.service';
 
 @Component({
   selector: 'app-retrieve',
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class RetrieveComponent implements OnInit {
 
-  constructor(private userService: UserService , private router: Router) { }
+  constructor(private appointmentService: AppointmentService , private router: Router) { }
 
   appointment: Appointment;
   code: string;
@@ -21,10 +21,10 @@ export class RetrieveComponent implements OnInit {
   }
 
   onSubmit() {
-    this.userService.findAppointment(this.code).subscribe(result =>  this.gotoUserList(result));
+    this.appointmentService.findAppointment(this.code).subscribe(result =>  this.updateAppointment(result));
   }
 
-  gotoUserList(resApp: Appointment[]) {
+  updateAppointment(resApp: Appointment[]) {
     this.appointment = resApp[0];
 }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../service/user.service';
 import { Appointment } from '../models/appointment.model';
+import { AppointmentService } from '../service/appointment.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,7 +12,7 @@ export class AppointmentComponent implements OnInit {
 
   appointment: Appointment;
 
-  constructor(private userService: UserService , private router: Router) {
+  constructor(private appointmentService: AppointmentService , private router: Router) {
     this.appointment = new Appointment();
    }
 
@@ -20,10 +20,10 @@ export class AppointmentComponent implements OnInit {
   }
 
   onSubmit() {
-    this.userService.save(this.appointment).subscribe(result => this.gotoUserList(result));
+    this.appointmentService.save(this.appointment).subscribe(result => this.updateAppointment(result));
   }
 
-  gotoUserList(resApp: Appointment) {
+  updateAppointment(resApp: Appointment) {
         this.appointment = resApp;
   }
 

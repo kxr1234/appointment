@@ -7,8 +7,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { UserService } from '../service/user.service';
 import { Appointment } from '../models/appointment.model';
+import { AppointmentService } from '../service/appointment.service';
 
 describe('RetrieveComponent', () => {
   let component: RetrieveComponent;
@@ -23,7 +23,7 @@ describe('RetrieveComponent', () => {
         HttpClientModule,
         FormsModule
       ],
-      providers: [UserService]
+      providers: [AppointmentService]
     })
     .compileComponents();
   }));

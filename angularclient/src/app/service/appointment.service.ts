@@ -4,7 +4,7 @@ import { Appointment } from '../models/appointment.model';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class UserService {
+export class AppointmentService {
 
   private usersUrl: string;
 

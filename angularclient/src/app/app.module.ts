@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { UserComponent } from './user/user.component';
-import { UserService } from './service/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RetrieveComponent } from './retrieve/retrieve.component';
+import { AppointmentService } from './service/appointment.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { RetrieveComponent } from './retrieve/retrieve.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [AppointmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,9 +7,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
-import { UserService } from '../service/user.service';
 import { AppComponent } from '../app.component';
 import { RetrieveComponent } from '../retrieve/retrieve.component';
+import { AppointmentService } from '../service/appointment.service';
 
 
 describe('AppointmentComponent', () => {
@@ -25,7 +25,7 @@ describe('AppointmentComponent', () => {
         HttpClientModule,
         FormsModule
       ],
-      providers: [UserService]
+      providers: [AppointmentService]
     })
     .compileComponents();
   }));
